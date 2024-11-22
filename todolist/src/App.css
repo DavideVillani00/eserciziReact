@@ -4,3 +4,19 @@
   padding: 2rem;
   text-align: center;
 }
+
+li {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.delete {
+  font-weight: bolder;
+  color: red;
+}
+.fatto {
+  color: green;
+}
+.dafare {
+  color: brown;
+}
