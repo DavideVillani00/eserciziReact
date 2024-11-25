@@ -1,9 +1,10 @@
 import React from "react";
+import "../App.css";
 import iconDelete from "../assets/icons8-rimuovere-30.png";
 import iconDone from "../assets/icons8-fatto-30.png";
 import iconNotDone from "../assets/icons8-dafare-30.png";
 export const Item = ({ item, todolist, setTodolist }) => {
-  // setta le to do sul do it
+  // cambia il fatto o da fare
   const handleDoIt = () => {
     setTodolist(
       todolist.map((el) => {
@@ -14,7 +15,7 @@ export const Item = ({ item, todolist, setTodolist }) => {
       })
     );
   };
-  /* non funziona */
+  // elimina l'elemento
   const handleDelete = () => {
     setTodolist(
       todolist.filter((el) => {
@@ -23,22 +24,15 @@ export const Item = ({ item, todolist, setTodolist }) => {
     );
   };
   return (
-    // <li>
-    //   <span className="delete" onClick={handleDelete}>
-    //     X
-    //   </span>
-    //   <span>{item.value}</span>
-    //   <span className={item.doit ? "fatto" : "dafare"} onClick={handleDoIt}>
-    //     {item.doit ? "fatto" : "da fare"}
-    //   </span>
-    // </li>
-    <li>
-      <span>{item.value}</span>
-      <span onClick={handleDoIt}>
+    <tr>
+      <td>{item.value}</td>
+      <td onClick={handleDoIt}>
         {!item.doit && <img src={iconNotDone} alt="da fare" />}
         {item.doit && <img src={iconDone} alt="fatto" />}
-      </span>
-      <img src={iconDelete} alt="cestino cancella" />
-    </li>
+      </td>
+      <td onClick={handleDelete}>
+        <img src={iconDelete} alt="cestino cancella" />
+      </td>
+    </tr>
   );
 };

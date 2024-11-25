@@ -4,19 +4,21 @@
   padding: 2rem;
   text-align: center;
 }
-
-li {
+table {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: right;
 }
-.delete {
-  font-weight: bolder;
-  color: red;
+tbody {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+  margin-bottom: 20px;
+  gap: 5px;
 }
-.fatto {
-  color: green;
+tr {
+  border-bottom: 1px dashed gray;
 }
-.dafare {
-  color: brown;
+table img {
+  transform: scale(0.9);
 }
