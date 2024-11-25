@@ -1,8 +1,8 @@
 import React from "react";
 import "../App.css";
-import iconDelete from "../assets/icons8-rimuovere-30.png";
-import iconDone from "../assets/icons8-fatto-30.png";
-import iconNotDone from "../assets/icons8-dafare-30.png";
+import iconDelete from "../assets/icons8-cestino-25.png";
+import iconDone from "../assets/icons8-fatto-25.png";
+import iconNotDone from "../assets/icons8-daFare-25.png";
 export const Item = ({ item, todolist, setTodolist }) => {
   // cambia il fatto o da fare
   const handleDoIt = () => {

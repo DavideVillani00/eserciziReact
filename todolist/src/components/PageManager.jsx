@@ -1,4 +1,6 @@
 import "./styleComponents/PageManager.css";
+import iconPreviusPage from "../assets/icons8-indietro-25.png";
+import iconNextPage from "../assets/icons8-avanti-25.png";
 
 export const PageManager = ({
   // prop
@@ -56,10 +58,12 @@ export const PageManager = ({
         <p>di {todolist.length}</p>
       </div>
       <div id="page">
-        {currentPage > 1 && <button onClick={handleDecreases}>-</button>}
+        {currentPage > 1 && (
+          <img onClick={handleDecreases} src={iconPreviusPage} />
+        )}
         <p>{currentPage}</p>
         {pageNumbers.length > 1 && currentPage < pageNumbers.length && (
-          <button onClick={handleIncreases}>+</button>
+          <img onClick={handleIncreases} src={iconNextPage} />
         )}
       </div>
     </div>

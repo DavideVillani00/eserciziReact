@@ -4,4 +4,27 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
+  margin-bottom: 5px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+#setPage {
+  color: #49a0ae;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+
+input {
+  border: 1px solid #49a0ae;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+}
+select {
+  border: 1px solid #49a0ae;
+  padding: 5px;
+  border-radius: 10px;
 }
