@@ -1,15 +1,17 @@
 import "./styleComponents/PageManager.css";
 import iconPreviusPage from "../assets/icons8-indietro-25.png";
 import iconNextPage from "../assets/icons8-avanti-25.png";
+import { useContext } from "react";
+import { myContext } from "../utilities/Provider";
 
-export const PageManager = ({
-  // prop
-  todolist,
-  currentPage,
-  numberForPage,
-  setNumberForPage,
-  setCurrentPage,
-}) => {
+export const PageManager = () => {
+  const {
+    todolist,
+    currentPage,
+    numberForPage,
+    setNumberForPage,
+    setCurrentPage,
+  } = useContext(myContext);
   // creazione di un nuovo array che indica il numero di pagine totali
   const pageNumbers = Array.from(
     {

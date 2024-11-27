@@ -1,11 +1,15 @@
-export const Form = ({
-  setInputValue,
-  inputValue,
-  setIdTodo,
-  idtodo,
-  setTodolist,
-  todolist,
-}) => {
+import { useContext } from "react";
+import { myContext } from "../utilities/Provider";
+
+export const Form = () => {
+  const {
+    setInputValue,
+    inputValue,
+    setIdTodo,
+    idtodo,
+    setTodolist,
+    todolist,
+  } = useContext(myContext);
   // funzioni handle
   // aggiornamento al cambio di input
   const handleChange = (e) => {
